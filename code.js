@@ -5,20 +5,19 @@ var buttonCheck = document.getElementById("button-check");
 
 function textChecker() {
   if (inputText.validity.valid && inputText.value !== "") {
-    console.log("Is true!");
-    // reversal(testString);
-    // alphabits(testString);
+    testString = inputText.value;
+    reversal(testString);
+    alphabits(testString);
     // palindrome(testString);
   };
 }
 
-
-function reversal() {
-
+function reversal(sentTestString) {
+  document.getElementById("reversal").innerHTML = "<p>Your reversed string is: " + sentTestString.split("").reverse().join(""); + "</p>";
 }
 
-function alphabits() {
-
+function alphabits(sentTestString) {
+  document.getElementById("sort").innerHTML = "<p>Your sorted string is: " + sentTestString.split("").sort().join(""); + "</p>";
 }
 
 function palindrome() {
